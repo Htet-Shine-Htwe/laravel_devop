@@ -9,7 +9,7 @@
         "InstanceTenancy": "default",
         "Tags": [
           {
-            "Value": "laravel_demo_vpc",
+            "Value": "radian_demo",
             "Key": "Name"
           }
         ]
@@ -17,10 +17,10 @@
     },
     "InternetGateway": {
       "Type": "AWS::EC2::InternetGateway",
-      "Properties": {
+      "Properties": { 
         "Tags": [
           {
-            "Value": "laravel_demo_igw",
+            "Value": "radian_demo_igw",
             "Key": "Name"
           }
         ]
@@ -43,12 +43,12 @@
         "VpcId": {
           "Ref": "VPC"
         },
-        "AvailabilityZoneId": "use1-az4",
+        "AvailabilityZoneId": "apse1-az1",
         "CidrBlock": "10.1.0.0/20",
         "MapPublicIpOnLaunch": true,
         "Tags": [
           {
-            "Value": "laravel_demo_public_subnet_1",
+            "Value": "radian_demo_public_subnet_1",
             "Key": "Name"
           }
         ]
@@ -60,12 +60,12 @@
         "VpcId": {
           "Ref": "VPC"
         },
-        "AvailabilityZoneId": "use1-az4",
+        "AvailabilityZoneId": "apse1-az1",
         "CidrBlock": "10.1.128.0/20",
         "MapPublicIpOnLaunch": false,
         "Tags": [
           {
-            "Value": "laravel_demo_private_subnet_1",
+            "Value": "radian_demo_private_subnet_1",
             "Key": "Name"
           }
         ]
@@ -77,12 +77,12 @@
         "VpcId": {
           "Ref": "VPC"
         },
-        "AvailabilityZoneId": "use1-az6",
+        "AvailabilityZoneId": "apse1-az2",
         "CidrBlock": "10.1.16.0/20",
         "MapPublicIpOnLaunch": true,
         "Tags": [
           {
-            "Value": "laravel_demo_public_subnet_2",
+            "Value": "radian_demo_public_subnet_2",
             "Key": "Name"
           }
         ]
@@ -94,12 +94,12 @@
         "VpcId": {
           "Ref": "VPC"
         },
-        "AvailabilityZoneId": "use1-az6",
+        "AvailabilityZoneId": "apse1-az2",
         "CidrBlock": "10.1.144.0/20",
         "MapPublicIpOnLaunch": false,
         "Tags": [
           {
-            "Value": "laravel_demo_private_subnet_2",
+            "Value": "radian_demo_private_subnet_2",
             "Key": "Name"
           }
         ]
@@ -113,7 +113,7 @@
         },
         "Tags": [
           {
-            "Value": "laravel_demo_rtb_public",
+            "Value": "radian_demo_rtb_public",
             "Key": "Name"
           }
         ]
@@ -230,7 +230,7 @@
         ],
         "Tags": [
           {
-            "Value": "laravel_demo_sg",
+            "Value": "radian_demo_sg",
             "Key": "Name"
           }
         ]
@@ -239,9 +239,9 @@
     "EC2Instance": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "ImageId": "ami-080e1f13689e07408",
+        "ImageId": "ami-047126e50991d067b",
         "InstanceType": "t2.micro",
-        "KeyName": "laravel_demo",
+        "KeyName": "se-1access",
         "SubnetId": {
           "Ref": "PublicSubnet1"
         },
@@ -252,7 +252,7 @@
         ],
         "Tags": [
           {
-            "Value": "laravel_demo_ec2_instance",
+            "Value": "radian_demo_ec2_instance",
             "Key": "Name"
           }
         ],
@@ -262,9 +262,9 @@
               "",
               [
                 "#!/bin/bash -ex\n",
-                "git clone https://github.com/rcravens/devops-laravel.git /usr/local/bin/devops\n",
+                "git clone https://github.com/Htet-Shine-Htwe/laravel_devop.git /usr/local/bin/devops\n",
                 "/usr/local/bin/devops/common/create_aliases.sh\n",
-                "source ~/.bashrc\n",
+                "source ~/.bashrc\n"
               ]
             ]
           }
