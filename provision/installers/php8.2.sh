@@ -14,9 +14,6 @@ php8.2-mbstring php8.2-mysql php8.2-odbc php8.2-opcache php8.2-pgsql php8.2-phpd
 php8.2-snmp php8.2-soap php8.2-sqlite3 php8.2-sybase php8.2-tidy php8.2-xdebug php8.2-xml php8.2-xmlrpc php8.2-xsl \
 php8.2-zip php8.2-memcached php8.2-redis php8.2-imagick imagemagick mcrypt
 
-# Install Generic PHP packages
-sudo apt-get install -y \
-php8.2-imagick imagemagick mcrypt
 
 # Enable Imagick and Xdebug extensions
 sudo phpenmod imagick
